@@ -62,12 +62,14 @@ function Keeper(){
     <CreateArea addNote={addNote}/>
 
     {notes.length >0 && <p className="user-details">{user.name}'s Notes ( Total: {notes.length} )</p>}
+
     {notes.map((note) => 
     <Note 
       key={note._id}
       id={note._id}
       title={note.title}
       content={note.content}
+      createdAt={note.created_at}
       deleteNote={deleteNote}
     />)}
 

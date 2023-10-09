@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 
-function Register(props){
+function Register(){
     const navigate = useNavigate();
     const [details, setDetails] = useState({
         name: "",

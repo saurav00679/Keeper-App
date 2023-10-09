@@ -66,10 +66,24 @@ footer p {
   word-wrap: break-word;
 }
 
-.note button {
+.note .deleteButton {
   position: relative;
   float: right;
   margin-right: 10px;
+  color: rgb(243, 115, 115);
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+  background: white;
+}
+
+.note .viewBtn {
+  position: relative;
+  float: left;
+  margin-top: -40px;
+  margin-left: 80%;
   color: #f5ba13;
   border: none;
   width: 36px;
@@ -77,6 +91,30 @@ footer p {
   cursor: pointer;
   outline: none;
   background: white;
+}
+
+.note .created-at{
+  width: 50%;
+  margin-bottom: -30px;
+  font-family: "Montserrat", sans-serif;
+  font-size:smaller
+}
+
+.note .editButton{
+  margin-top: -10px;
+  margin-right: 10px;
+  color: black;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+  background: white;
+}
+
+.noteHead{
+  display:flex;
+  justify-content: space-between;
 }
 
 form.create-note {
@@ -226,6 +264,51 @@ header button{
 
 .user-details{
   font-size: larger;
-  margin: 30px 30px -10px 30px;
+  margin: 30px 30px 10px 30px;
   font-family: "McLaren", cursive;
+}
+
+.edit-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:30px;
+  margin-top: 50px;
+}
+.edit-page h2{
+  color:#f5ba13
+}
+.edit-note{
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+form.edit-note input,
+form.edit-note textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+form.edit-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
 }
