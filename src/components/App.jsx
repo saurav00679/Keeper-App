@@ -1,41 +1,18 @@
-import React, { useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import Note from "./Note";
-import CreateArea from "./CreateArea";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Keeper from "./Keeper";
+import Login from "./Login";
+import Register from "./Register";
 
 function App(){
-    const [notes, setNotes] = useState([]);
-
-    function addNote( title, content){
-      setNotes((previousVal)=>{
-        return [...previousVal, { title: title, content: content }]
-      })
-    }
-
-    function deleteNote(id){
-      setNotes((previousVal)=>{
-        return previousVal.filter((_val, index)=>{
-          return index !== id;
-        })
-      })
-    }
-
     return (
-    <div>
-    <Header/>
-    <CreateArea addNote={addNote}/>
-    {notes.map((note, index) => 
-    <Note 
-      key={index}
-      id={index}
-      title={note.title}
-      content={note.content}
-      deleteNote={deleteNote}
-    />)}
-    
-    <Footer/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+          <Route path="/keeper/:id" element={<Keeper/>} />
+          <Route path="/register" element={<Register/>} />
+          <Route path="/" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
     );
 }
 

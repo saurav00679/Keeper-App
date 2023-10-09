@@ -1,8 +1,12 @@
 import React from "react";
 import HighlightIcon from '@mui/icons-material/Highlight';
 
-function Header(){
-    return (<header><h1><HighlightIcon />Keeper</h1></header> 
+function Header(props){
+    return (
+    <header>
+      <h1><HighlightIcon />Keeper <br/><span>Write your daily notes</span></h1>
+      {props.isLoggedIn && <a href="/"><button>Logout</button></a>}
+    </header>
     );
 }
 

@@ -13,6 +13,8 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
   background-color: #f5ba13;
   margin: auto -16px;
   padding: 16px 32px;
@@ -23,6 +25,12 @@ header h1 {
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
+}
+header h1 span{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  font-size: large;
+  margin-left: 30px;
 }
 
 footer {
@@ -45,10 +53,12 @@ footer p {
   margin: 16px;
   float: left;
 }
+
 .note h1 {
   font-size: 1.1em;
   margin-bottom: 6px;
 }
+
 .note p {
   font-size: 1.1em;
   margin-bottom: 10px;
@@ -66,6 +76,7 @@ footer p {
   height: 36px;
   cursor: pointer;
   outline: none;
+  background: white;
 }
 
 form.create-note {
@@ -100,4 +111,121 @@ form.create-note button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+
+.login-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  width: 480px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  margin-bottom: 10px;
+}
+
+.login-page input{
+  width: 100%;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+.login-page button{
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  width: 100px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+.register-btn{
+  align-content: center;
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  width: 100px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+  margin: -10px 0 20px 0;
+}
+.register-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 20px 20px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.register-form h2{
+  color:#f5ba13
+}
+
+.card_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  color:#f5ba13;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.card_body form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+}
+
+.card_body button{
+  align-content: center;
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  width: 100px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+  margin-left: 100px;
+}
+
+.login-opt{
+  margin-left: -100px;
+}
+.login-opt > p{
+  margin-top: 15px;
+  margin-left: 125px;
+}
+
+header button{
+  align-content: center;
+  background: red;
+  color: #fff;
+  border: 1px;
+  width: 100px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+  margin-top: 30px;
+}
+
+.user-details{
+  font-size: larger;
+  margin: 30px 30px -10px 30px;
+  font-family: "McLaren", cursive;
 }
