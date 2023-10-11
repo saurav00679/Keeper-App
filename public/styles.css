@@ -15,7 +15,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #f5ba13;
+  background-color: #93b922;
   margin: auto -16px;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -26,6 +26,7 @@ header h1 {
   font-family: "McLaren", cursive;
   font-weight: 200;
 }
+
 header h1 span{
   font-family: "Montserrat", sans-serif;
   font-weight: 100;
@@ -44,6 +45,7 @@ footer {
 footer p {
   color: #ccc;
 }
+
 .note {
   background: #fff;
   border-radius: 7px;
@@ -126,6 +128,7 @@ form.create-note {
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
+
 form.create-note input,
 form.create-note textarea {
   width: 100%;
@@ -136,6 +139,7 @@ form.create-note textarea {
   font-family: inherit;
   resize: none;
 }
+
 form.create-note button {
   position: absolute;
   right: 18px;
@@ -162,7 +166,6 @@ form.create-note button {
   background: #fff;
   padding: 15px;
   border-radius: 7px;
-  box-shadow: 0 1px 5px rgb(138, 137, 137);
   margin-bottom: 10px;
 }
 
@@ -176,7 +179,7 @@ form.create-note button {
 }
 
 .login-page button{
-  background: #f5ba13;
+  background:  rgb(62, 105, 149);
   color: #fff;
   border: none;
   width: 100px;
@@ -184,31 +187,26 @@ form.create-note button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+  margin-top: 10px;
 }
 
-.register-btn{
-  align-content: center;
-  background: #f5ba13;
-  color: #fff;
-  border: none;
-  width: 100px;
-  height: 36px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  outline: none;
-  margin: -10px 0 20px 0;
-}
 .register-form{
+  height: 78vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 30px auto 20px 20px;
+  margin-top: 20px;
   background: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
+
 .register-form h2{
-  color:#f5ba13
+  color:rgb(116, 116, 208);
+  margin-bottom: 10px;
+}
+
+.register-form p{
+  color: rgb(185, 91, 91);
 }
 
 .card_body {
@@ -216,11 +214,13 @@ form.create-note button {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
-  color:#f5ba13;
+  height: 78vh;
+  color: rgb(91, 91, 168);
   background: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
 }
+
 .card_body form{
   display: flex;
   flex-direction: column;
@@ -230,7 +230,7 @@ form.create-note button {
 
 .card_body button{
   align-content: center;
-  background: #f5ba13;
+  background: #41a11e;
   color: #fff;
   border: none;
   width: 100px;
@@ -239,14 +239,17 @@ form.create-note button {
   cursor: pointer;
   outline: none;
   margin-left: 100px;
+  border-radius: 5%;
 }
 
 .login-opt{
   margin-left: -100px;
 }
+
 .login-opt > p{
+  color: rgb(178, 93, 93);
   margin-top: 15px;
-  margin-left: 125px;
+  margin-left: 135px;
 }
 
 header button{
@@ -275,9 +278,11 @@ header button{
   gap:30px;
   margin-top: 50px;
 }
+
 .edit-page h2{
   color:#f5ba13
 }
+
 .edit-note{
   position: relative;
   width: 480px;
@@ -298,6 +303,7 @@ form.edit-note textarea {
   font-family: inherit;
   resize: none;
 }
+
 form.edit-note button {
   position: absolute;
   right: 18px;

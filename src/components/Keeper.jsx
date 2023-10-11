@@ -19,14 +19,14 @@ function Keeper(){
           axios.get(`http://localhost:4000/getUser/${id}`),
           axios.get(`http://localhost:4000/notes/${id}`)
         ]);
-  
+
         setUser(userResponse.data);
         setNotes(notesResponse.data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     }
-  
+
     fetchData();
   }, [id, notesChanged]);
 
@@ -37,9 +37,10 @@ function Keeper(){
         content: content,
         user_id: id
       };
-      await axios.post("http://localhost:4000/note", body);
-      setNotesChanged((previousVal) => !previousVal);
-      
+      const response = await axios.post("http://localhost:4000/note", body);
+      setNotes((previousVal)=>{
+        return [...previousVal, response.data];
+      })
     } catch(err){
       console.log(err);
       alert(err);

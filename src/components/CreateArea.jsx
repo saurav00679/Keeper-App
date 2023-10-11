@@ -20,9 +20,10 @@ function CreateArea(props){
       })
     }
 
-    function addNote(){
+    function addNote(event){
+      event.preventDefault();
       props.addNote(note.title, note.content);
-      setNote({title: "", content: ""})
+      setNote({title: "", content: ""});
     }
 
     return(

@@ -14,8 +14,7 @@ function Login(){
       event.preventDefault();
 
       try{
-        const response = await axios.post('http://localhost:4000/login', { username:  userDetail.username, password: userDetail.password } );
-
+        const response = await axios.post('http://localhost:4000/login', { username:  userDetail.username, password: userDetail.password });
         navigate(`/keeper/${response.data.userId}`);
       } catch (err){
           alert(err?.response?.data?.err);
@@ -37,14 +36,13 @@ function Login(){
     <div>
       <Header/>
       <div className='register-form'>
-        <h2 className='mt-2'>Login to Continue</h2>
+        <h2 className='top mt-5'>Login to Continue</h2>
         <form className='login-page' onSubmit={handleSubmit}>
           <input onChange={handleChange} type='text' placeholder='Enter Your Username' name='username' required/>
           <input onChange={handleChange} type='password' placeholder='Enter the password' name='password' required/>
-          <button type='submit'>Login</button>
+          <button className="btn btn-primary" type='submit'>Login</button>
         </form>
-        <p>OR</p>
-        <a href='/register' ><button className='register-btn'>Sign Up</button></a>
+        <p>Don't have an Account? <a href='/register'>Create Account</a></p>
       </div>
     </div>
     )
